@@ -1,0 +1,13 @@
+.connected {
+  @apply bg-blue-300;
+}
+.disconnected {
+  @apply bg-blue-500;
+}
+
+.tokopedia {
+  background-color: #d9f2e3;
+}
+.shopee {
+  background-color: #ffdfcc;
+}
