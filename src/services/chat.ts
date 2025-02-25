@@ -3,6 +3,12 @@ export const chats = [
     id: 1,
     name: 'Alice Johnson',
     message: 'Masih ready gan?',
+
+    vendor: 'tokopedia',
+    storeName: 'Beauty Lovers',
+    unreadCount: 1,
+    userId: 1,
+    date: '2025-02-26',
     messages: [
       {
         id: 1,
@@ -86,11 +92,6 @@ export const chats = [
         isSender: true,
       },
     ],
-    vendor: 'tokopedia',
-    storeName: 'Beauty Lovers',
-    unreadCount: 1,
-    userId: 1,
-    date: '2025-02-26',
   },
   {
     id: 2,
@@ -101,6 +102,22 @@ export const chats = [
     unreadCount: 2,
     userId: 2,
     date: '2025-02-26',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Consequat est ex nostrud dolore ullamco in esse nostrud Lorem voluptate ad.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message:
+          'Fugiat occaecat commodo non occaecat mollit consectetur nulla eiusmod duis laborum laborum incididunt.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
   {
     id: 3,
@@ -111,6 +128,21 @@ export const chats = [
     unreadCount: 0,
     userId: 3,
     date: '2025-02-23',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Proident duis proident adipisicing irure officia eu dolor duis.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message: 'Reprehenderit sint aute eiusmod sunt.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
   {
     id: 4,
@@ -121,6 +153,21 @@ export const chats = [
     unreadCount: 3,
     userId: 4,
     date: '2025-02-26',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Est ipsum proident cillum id do duis nostrud laboris officia exercitation nisi duis amet.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message: 'Occaecat non ad anim laborum mollit sint enim duis.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
   {
     id: 5,
@@ -131,6 +178,21 @@ export const chats = [
     unreadCount: 0,
     userId: 5,
     date: '2025-02-25',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Commodo consectetur occaecat deserunt ex proident eiusmod dolore sunt.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message: 'Consequat anim ut aliqua adipisicing laborum proident in.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
   {
     id: 6,
@@ -141,6 +203,21 @@ export const chats = [
     unreadCount: 5,
     userId: 6,
     date: '2025-02-26',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Dolor consectetur anim in excepteur commodo Lorem culpa fugiat Lorem laboris.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message: 'Occaecat do ut anim quis ullamco amet consectetur cupidatat.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
   {
     id: 7,
@@ -151,5 +228,20 @@ export const chats = [
     unreadCount: 0,
     userId: 7,
     date: '2025-02-24',
+    messages: [
+      {
+        id: 1,
+        message: 'Adipisicing nulla nisi sint sit laborum nisi.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message:
+          'Dolor do aliqua consequat elit ad ea velit duis cupidatat veniam.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: false,
+      },
+    ],
   },
 ];

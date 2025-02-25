@@ -42,6 +42,12 @@ const ChatBox = () => {
     }
 
     setReservedHeight(mainHeaderHeight);
+
+    // scroll to bottom of the chatbox
+    setTimeout(() => {
+      const element = document.querySelector('#chat-anchor');
+      element?.lastElementChild?.scrollIntoView(true);
+    }, 1);
   }, [activeChat]);
 
   if (!activeChat) {
@@ -68,7 +74,7 @@ const ChatBox = () => {
               setActiveChat(null);
             }}
           />
-          {activeChat.name} {reservedHeight}
+          {activeChat.name}
         </h1>
 
         <div className="flex items-center gap-6">
@@ -87,10 +93,14 @@ const ChatBox = () => {
           className="chatbox flex-1 content-end overflow-x-scroll p-8"
           style={{ maxHeight: `calc(100vh - ${reservedHeight}px)` }}
         >
-          <ul className="flex flex-col justify-end gap-4">
+          <ul id="chat-anchor" className="flex flex-col justify-end gap-4">
             {activeChat.messages.map(message => (
               <li key={message.id}>
-                <ChatBubble message={message as Message} />
+                <ChatBubble
+                  message={message as Message}
+                  senderName={activeChat.name}
+                  senderId={activeChat.id}
+                />
               </li>
             ))}
           </ul>

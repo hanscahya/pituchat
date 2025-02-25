@@ -1,3 +1,11 @@
 section.chatbox {
   background-color: #CEDBF2;
 }
+
+#scroller * {
+  overflow-anchor: none;
+}
+#anchor {
+  overflow-anchor: auto;
+  height: 1px;
+}
