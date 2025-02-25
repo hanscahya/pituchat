@@ -1,5 +1,7 @@
-import { FaUserCircle } from 'react-icons/fa';
 import moment from 'moment';
+
+import './ChatListItem.css';
+import { FaUserCircle } from 'react-icons/fa';
 
 import userAvatar1 from '../../../assets/pituchat-avatar-user-1.png';
 import userAvatar2 from '../../../assets/pituchat-avatar-user-2.png';
@@ -9,15 +11,9 @@ import userAvatar4 from '../../../assets/pituchat-avatar-user-4.png';
 import TokopediaIcon from '../../../assets/pituchat-icon-tokopedia.png';
 import ShopeeIcon from '../../../assets/pituchat-icon-shopee.png';
 
-type Chat = {
-  id: number;
-  name: string;
-  message: string;
-  unreadCount: number;
-  date: string;
-  vendor: string;
-  storeName: string;
-};
+import { useChat } from '../../../context/ChatContext';
+
+import { Chat } from '../../../types/chat.types';
 
 const getAvatar = (id: number) => {
   switch (id) {
@@ -46,6 +42,7 @@ const getIcon = (vendor: string) => {
 };
 
 const ChatListItem = ({ chat }: { chat: Chat }) => {
+  const { setActiveChat } = useChat();
   const avatar = getAvatar(chat.id);
   const icon = getIcon(chat.vendor);
 
@@ -55,7 +52,12 @@ const ChatListItem = ({ chat }: { chat: Chat }) => {
   const formattedDate = isToday ? 'Hari ini' : chatDate.format('DD MMM YYYY');
 
   return (
-    <article className="flex items-center gap-4 p-4">
+    <article
+      className="flex cursor-pointer items-center gap-4 p-4"
+      onClick={() => {
+        setActiveChat(chat);
+      }}
+    >
       {avatar ? (
         <img src={avatar} alt={chat.name} className="h-12 w-12 rounded-full" />
       ) : (

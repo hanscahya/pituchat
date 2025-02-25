@@ -7,9 +7,10 @@ import { chats } from '../../../services/chat';
 
 import ChatListItem from './ChatListItem';
 
+import { Chat } from '../../../types/chat.types';
+
 const ChatList = () => {
   const [activeTab, setActiveTab] = useState('need-reply');
-
   const [filteredChats, setFilteredChats] = useState(chats);
 
   useEffect(() => {
@@ -68,7 +69,7 @@ const ChatList = () => {
       <main>
         <ul>
           {filteredChats.map(v => (
-            <ChatListItem key={v.id} chat={v} />
+            <ChatListItem key={v.id} chat={v as Chat} />
           ))}
         </ul>
       </main>

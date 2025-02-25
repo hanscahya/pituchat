@@ -6,7 +6,10 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="flex items-center justify-between border-b-2 px-6 py-4">
+    <header
+      id="main-header"
+      className="flex items-center justify-between border-b-2 px-6 py-4"
+    >
       <img
         src={logo}
         alt="Pituchat"

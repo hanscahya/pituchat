@@ -1,14 +1,16 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
+import { Chat } from '../types/chat.types';
+
 type ChatContextType = {
-  activeChat: string;
-  setActiveChat: (chat: string) => void;
+  activeChat: Chat | null | undefined;
+  setActiveChat: (chat: Chat | null) => void;
 };
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export const ChatProvider = ({ children }: { children: ReactNode }) => {
-  const [activeChat, setActiveChat] = useState<string>('');
+  const [activeChat, setActiveChat] = useState<Chat | null>(null);
 
   return (
     <ChatContext.Provider value={{ activeChat, setActiveChat }}>

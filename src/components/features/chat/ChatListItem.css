@@ -1,0 +1,5 @@
+article:hover {
+  background-color: #eef0f2;
+  transition: background-color 0.25s ease;
+}
+
