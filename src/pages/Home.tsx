@@ -1,9 +1,25 @@
 import DefaultLayout from '../components/layout/DefaultLayout';
+import ChatList from '../components/features/chat/ChatList';
+import ChatBox from '../components/features/chat/ChatBox';
+
+import { ChatProvider } from '../context/ChatContext';
 
 export default function Home() {
   return (
-    <DefaultLayout>
-      <div>Home</div>
-    </DefaultLayout>
+    <ChatProvider>
+      <DefaultLayout>
+        <main className="grid h-full grid-cols-12">
+          <section className="col-span-12 md:col-span-3">
+            <ChatList />
+          </section>
+          <section
+            className="col-span-12 md:col-span-9"
+            style={{ backgroundColor: '#F9F9FA' }}
+          >
+            <ChatBox />
+          </section>
+        </main>
+      </DefaultLayout>
+    </ChatProvider>
   );
 }
