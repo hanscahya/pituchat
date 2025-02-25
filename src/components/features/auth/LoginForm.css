@@ -1,0 +1,25 @@
+.form-item {
+  margin-bottom: 1.5rem;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.form-item input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.form-item input::placeholder {
+  color: #ccc;
+}
