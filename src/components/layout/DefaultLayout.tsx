@@ -32,7 +32,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
 
       <div className="flex h-full">
         {/* Sidebar navigation */}
-        <aside className="flex h-full w-32 flex-col border-r-2">
+        <aside className="flex h-full w-24 flex-col border-r-2 md:w-32">
           <section className="flex-1">
             <NavButton
               name="Chat"

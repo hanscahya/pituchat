@@ -38,32 +38,31 @@ const ChatList = () => {
         </div>
       </header>
 
-      <nav>
-        <ul className="grid w-full grid-cols-3 items-center gap-y-4">
-          <li
-            className={`flex items-center justify-center border-b-4 p-4 ${
-              activeTab === 'need-reply' ? 'border-blue-800' : ''
-            }`}
-          >
-            <button onClick={() => setActiveTab('need-reply')}>
-              Perlu Balas
-            </button>
-          </li>
-          <li
-            className={`flex items-center justify-center border-b-4 p-4 ${
-              activeTab === 'replied' ? 'border-blue-600' : ''
-            }`}
-          >
-            <button onClick={() => setActiveTab('replied')}>Terbalas</button>
-          </li>
-          <li
-            className={`flex items-center justify-center border-b-4 p-4 ${
-              activeTab === 'all' ? 'border-blue-800' : ''
-            }`}
-          >
-            <button onClick={() => setActiveTab('all')}>Semua Chat</button>
-          </li>
-        </ul>
+      <nav className="grid w-full grid-cols-3 items-center gap-y-4 lg:grid-cols-3">
+        <button
+          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+            activeTab === 'need-reply' ? 'border-blue-800' : ''
+          }`}
+          onClick={() => setActiveTab('need-reply')}
+        >
+          Perlu Balas
+        </button>
+        <button
+          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+            activeTab === 'replied' ? 'border-blue-600' : ''
+          }`}
+          onClick={() => setActiveTab('replied')}
+        >
+          Terbalas
+        </button>
+        <button
+          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+            activeTab === 'all' ? 'border-blue-800' : ''
+          }`}
+          onClick={() => setActiveTab('all')}
+        >
+          Semua Chat
+        </button>
       </nav>
 
       <main>
