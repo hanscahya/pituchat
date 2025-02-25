@@ -1,0 +1,10 @@
+label {
+  border: none;
+  background-color: transparent;
+  color: #0C4AC0;
+}
+
+.active {
+  background-color: #E6F5FC;
+  border-left: 6px solid #0C4AC0;
+}

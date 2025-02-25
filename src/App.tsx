@@ -1,12 +1,15 @@
 import { RouterProvider } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { NavProvider } from './context/NavContext';
 import router from './routes';
 import './App.css';
 
 function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <NavProvider>
+        <RouterProvider router={router} />
+      </NavProvider>
     </AuthProvider>
   );
 }
