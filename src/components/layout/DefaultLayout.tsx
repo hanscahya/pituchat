@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Header from '../common/Header';
 import NavButton from '../common/NavButton';
@@ -11,7 +12,6 @@ import chatActiveIcon from '../../assets/pituchat-icon-chat-active.png';
 import storeIcon from '../../assets/pituchat-icon-store.png';
 import storeActiveIcon from '../../assets/pituchat-icon-store-active.png';
 import logoutIcon from '../../assets/pituchat-icon-logout.png';
-
 type DefaultLayoutProps = {
   children: ReactNode;
 };
@@ -19,6 +19,12 @@ type DefaultLayoutProps = {
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const { activeNav, setActiveNav } = useNav();
   const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleNavClick = (nav: string, path: string) => {
+    setActiveNav(nav);
+    navigate(path);
+  };
 
   return (
     <div className="flex h-screen flex-col">
@@ -30,15 +36,15 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
           <section className="flex-1">
             <NavButton
               name="Chat"
-              icon={activeNav === 'chat' ? chatActiveIcon : chatIcon}
-              isActive={activeNav === 'chat'}
-              onClick={() => setActiveNav('chat')}
+              icon={activeNav === 'home' ? chatActiveIcon : chatIcon}
+              isActive={activeNav === 'home'}
+              onClick={() => handleNavClick('home', '/')}
             />
             <NavButton
               name="Toko"
-              icon={activeNav === 'store' ? storeActiveIcon : storeIcon}
-              isActive={activeNav === 'store'}
-              onClick={() => setActiveNav('store')}
+              icon={activeNav === 'settings' ? storeActiveIcon : storeIcon}
+              isActive={activeNav === 'settings'}
+              onClick={() => handleNavClick('settings', '/settings')}
             />
           </section>
           <NavButton

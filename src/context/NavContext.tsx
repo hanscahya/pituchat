@@ -8,7 +8,7 @@ type NavContextType = {
 const NavContext = createContext<NavContextType | undefined>(undefined);
 
 export const NavProvider = ({ children }: { children: ReactNode }) => {
-  const [activeNav, setActiveNav] = useState<string>('chat'); // Default active menu
+  const [activeNav, setActiveNav] = useState<string>('home'); // Default active menu
 
   return (
     <NavContext.Provider value={{ activeNav, setActiveNav }}>
