@@ -3,6 +3,89 @@ export const chats = [
     id: 1,
     name: 'Alice Johnson',
     message: 'Masih ready gan?',
+    messages: [
+      {
+        id: 1,
+        message:
+          'Ex ea laborum officia culpa esse pariatur est nostrud elit eu.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 2,
+        message:
+          'Enim dolor deserunt do incididunt labore veniam occaecat laboris exercitation ullamco quis qui commodo.',
+        datetime: '2025-02-26 10:02:00',
+        isSender: false,
+      },
+      {
+        id: 3,
+        message: 'Irure commodo est aliqua culpa.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+      {
+        id: 4,
+        message:
+          'Sunt eu cupidatat mollit consectetur qui amet aliqua ea cillum dolore ipsum.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+      {
+        id: 5,
+        message:
+          'Ex ea laborum officia culpa esse pariatur est nostrud elit eu.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 6,
+        message:
+          'Enim dolor deserunt do incididunt labore veniam occaecat laboris exercitation ullamco quis qui commodo.',
+        datetime: '2025-02-26 10:02:00',
+        isSender: false,
+      },
+      {
+        id: 7,
+        message: 'Irure commodo est aliqua culpa.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+      {
+        id: 8,
+        message:
+          'Sunt eu cupidatat mollit consectetur qui amet aliqua ea cillum dolore ipsum.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+      {
+        id: 9,
+        message:
+          'Ex ea laborum officia culpa esse pariatur est nostrud elit eu.',
+        datetime: '2025-02-26 10:00:00',
+        isSender: true,
+      },
+      {
+        id: 10,
+        message:
+          'Enim dolor deserunt do incididunt labore veniam occaecat laboris exercitation ullamco quis qui commodo.',
+        datetime: '2025-02-26 10:02:00',
+        isSender: false,
+      },
+      {
+        id: 11,
+        message: 'Irure commodo est aliqua culpa.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+      {
+        id: 12,
+        message:
+          'Sunt eu cupidatat mollit consectetur qui amet aliqua ea cillum dolore ipsum.',
+        datetime: '2025-02-26 10:03:00',
+        isSender: true,
+      },
+    ],
     vendor: 'tokopedia',
     storeName: 'Beauty Lovers',
     unreadCount: 1,
