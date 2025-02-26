@@ -12,6 +12,7 @@ import { Chat } from '../../../types/chat.types';
 const ChatList = () => {
   const [activeTab, setActiveTab] = useState('need-reply');
   const [filteredChats, setFilteredChats] = useState(chats);
+  const [totalUnreadCount, setTotalUnreadCount] = useState(0);
 
   useEffect(() => {
     if (activeTab === 'all') {
@@ -22,6 +23,15 @@ const ChatList = () => {
       setFilteredChats(chats.filter(chat => chat.unreadCount === 0));
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    setTotalUnreadCount(
+      chats.reduce((acc, chat) => {
+        if (chat.unreadCount > 0) return acc + 1;
+        return acc;
+      }, 0)
+    );
+  }, []);
 
   return (
     <>
@@ -46,7 +56,12 @@ const ChatList = () => {
           }`}
           onClick={() => setActiveTab('need-reply')}
         >
-          Perlu Balas
+          <span>Perlu Balas</span>
+          {totalUnreadCount > 0 && (
+            <span className="ml-2 rounded-full bg-blue-800 px-2 py-1 text-sm text-white">
+              {totalUnreadCount}
+            </span>
+          )}
         </button>
         <button
           className={`flex h-full items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
