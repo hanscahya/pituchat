@@ -38,7 +38,7 @@ const ChatBubble = ({
 
     return (
       <div className="flex flex-col gap-2">
-        <div className={`flex items-center self-start text-left`}>
+        <div className={`flex items-center gap-2 self-start text-left`}>
           <img
             src={avatar}
             alt={senderName}
@@ -46,7 +46,9 @@ const ChatBubble = ({
           />
           <div className="flex flex-col gap-2">
             <span className="px-4 text-sm text-gray-600">{senderName}</span>
-            <p className={`w-fit rounded-full bg-gray-200 px-4 py-2`}>
+            <p
+              className={`w-fit rounded-xl rounded-bl-none bg-gray-200 px-4 py-2 lg:rounded-full lg:rounded-bl-none`}
+            >
               {message.message}
             </p>
             <span className="px-4 text-sm text-gray-600">
@@ -62,11 +64,13 @@ const ChatBubble = ({
     <div className="flex flex-col gap-2">
       <div className={`flex items-center self-end text-right`}>
         <div className="flex flex-col gap-2">
-          <p className={`w-fit rounded-full bg-blue-700 px-4 py-2 text-white`}>
+          <p
+            className={`w-fit rounded-xl rounded-br-none bg-blue-700 px-4 py-2 text-white lg:rounded-full lg:rounded-br-none`}
+          >
             {message.message}
           </p>
           <span className="px-4 text-sm text-gray-600">
-            {moment(message.datetime).format('HH:mm')}
+            Sent • {moment(message.datetime).format('HH:mm')}
           </span>
         </div>
       </div>
