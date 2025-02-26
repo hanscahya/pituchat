@@ -53,7 +53,7 @@ const ChatBox = () => {
 
   if (!activeChat) {
     return (
-      <figure className="flex h-full flex-col items-center justify-center">
+      <figure className="hidden h-full flex-col items-center justify-center md:flex">
         <img src={emptyChat} alt="empty chat" className="h-80 w-80" />
 
         <p className="mt-4 text-center">Tidak ada pesan terpilih</p>

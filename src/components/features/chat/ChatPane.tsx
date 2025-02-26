@@ -59,7 +59,7 @@ const ChatPane = () => {
         </mark>
       </section>
 
-      <summary className="mt-4 p-4">
+      <div className="mt-4 p-4">
         <h3 className="font-semibold">Tentang pesan</h3>
         <table className="mt-4 w-full text-sm">
           <tbody>
@@ -77,7 +77,7 @@ const ChatPane = () => {
             </tr>
           </tbody>
         </table>
-      </summary>
+      </div>
     </>
   );
 };
