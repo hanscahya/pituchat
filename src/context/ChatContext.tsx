@@ -5,15 +5,25 @@ import { Chat } from '../types/chat.types';
 type ChatContextType = {
   activeChat: Chat | null | undefined;
   setActiveChat: (chat: Chat | null) => void;
+  isActiveChatPane: boolean;
+  setIsActiveChatPane: (isActive: boolean) => void;
 };
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export const ChatProvider = ({ children }: { children: ReactNode }) => {
   const [activeChat, setActiveChat] = useState<Chat | null>(null);
+  const [isActiveChatPane, setIsActiveChatPane] = useState(false);
 
   return (
-    <ChatContext.Provider value={{ activeChat, setActiveChat }}>
+    <ChatContext.Provider
+      value={{
+        activeChat,
+        setActiveChat,
+        isActiveChatPane,
+        setIsActiveChatPane,
+      }}
+    >
       {children}
     </ChatContext.Provider>
   );

@@ -41,7 +41,7 @@ const ChatList = () => {
 
       <nav className="grid w-full grid-cols-3 items-center gap-y-4 lg:grid-cols-3">
         <button
-          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+          className={`flex h-full items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
             activeTab === 'need-reply' ? 'border-blue-800' : ''
           }`}
           onClick={() => setActiveTab('need-reply')}
@@ -49,7 +49,7 @@ const ChatList = () => {
           Perlu Balas
         </button>
         <button
-          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+          className={`flex h-full items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
             activeTab === 'replied' ? 'border-blue-600' : ''
           }`}
           onClick={() => setActiveTab('replied')}
@@ -57,7 +57,7 @@ const ChatList = () => {
           Terbalas
         </button>
         <button
-          className={`flex items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
+          className={`flex h-full items-center justify-center border-b-4 p-4 md:px-0 lg:p-4 ${
             activeTab === 'all' ? 'border-blue-800' : ''
           }`}
           onClick={() => setActiveTab('all')}

@@ -42,7 +42,7 @@ const getIcon = (vendor: string) => {
 };
 
 const ChatListItem = ({ chat }: { chat: Chat }) => {
-  const { setActiveChat } = useChat();
+  const { setActiveChat, setIsActiveChatPane } = useChat();
   const avatar = getAvatar(chat.id);
   const icon = getIcon(chat.vendor);
 
@@ -56,6 +56,7 @@ const ChatListItem = ({ chat }: { chat: Chat }) => {
       className="flex cursor-pointer items-center gap-4 p-4"
       onClick={() => {
         setActiveChat(chat);
+        setIsActiveChatPane(false);
       }}
     >
       {avatar ? (

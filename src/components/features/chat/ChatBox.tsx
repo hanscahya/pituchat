@@ -18,7 +18,8 @@ import ChatBubble from './ChatBubble';
 import { Message } from '../../../types/chat.types';
 
 const ChatBox = () => {
-  const { activeChat, setActiveChat } = useChat();
+  const { activeChat, setActiveChat, isActiveChatPane, setIsActiveChatPane } =
+    useChat();
 
   // calculate max height of the chatbox
   const [reservedHeight, setReservedHeight] = useState<number>(0);
@@ -82,7 +83,11 @@ const ChatBox = () => {
             <FaSearch className="h-5 w-5 text-gray-800" />
           </button>
 
-          <button>
+          <button
+            onClick={() => {
+              setIsActiveChatPane(!isActiveChatPane);
+            }}
+          >
             <FaInfoCircle className="h-5 w-5 text-gray-800" />
           </button>
         </div>
