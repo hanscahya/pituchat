@@ -1,6 +1,8 @@
 import logo from '/pituchat-logo.svg';
-import { FaUser } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+
+import avatar from '../../assets/pituchat-avatar-user-logged-in.png';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,8 +19,9 @@ const Header = () => {
         onClick={() => navigate('/')}
       />
       <div className="flex items-center gap-4">
-        <button className="rounded-full bg-gray-200 p-2">
-          <FaUser className="h-6 w-6" />
+        <button className="flex items-center gap-2 rounded-xl p-2">
+          <img src={avatar} alt="avatar" className="h-10 w-10" />
+          <FaChevronDown className="h-4 w-4" />
         </button>
       </div>
     </header>
